@@ -13,4 +13,4 @@ set number relativenumber
 colorscheme gruvbox
 se clipboard=unnamedplus
 set cursorline
-
+syntax on

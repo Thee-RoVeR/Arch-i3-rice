@@ -12,10 +12,14 @@ gaps inner 8
 gaps outer 5
 
 set $mod Mod1
-font pango:JetBrains Mono 0.1
-
+#font pango:JetBrains Mono 0.1px
+default_border pixel 2
+for_window [class="firefox"] border pixel 2
 #disable focus on mouse hover 
 focus_follows_mouse no
+
+#flameshot 
+bindsym $mod+PrtSc exec flameshot full
 
 #volume control
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -116,16 +120,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
+        bindsym k resize shrink width 10 px or 10 ppt
+        bindsym h resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym j resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -143,11 +141,14 @@ bar {
 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #516b66 #516b66 #516b66 #516b66   #516b66
+client.focused          #4a4a49 #4a4a49 #4a4a49 #4a4a49   #4a4a49
 client.unfocused        #333333 #222222 #222222 #292d2e   #222222
 
-exec_always feh --bg-fill ~/.config/i3/walls/wall5.jpg
+#IMP exec's
+exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 75
+exec_always feh --bg-fill ~/.config/i3/walls/wall2.jpg
 exec_always --no-startup-id picom
+
 exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id dex --autostart --environment i3
