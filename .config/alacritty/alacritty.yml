@@ -1,80 +1,39 @@
 # Font configuration
 font:
   family: JetBrains Mono
-    # The `style` can be specified to pick a specific face.
   style: Regular
   size: 10.5
   draw_bold_text_with_bright_colors: false
 
-    # Colors (Tomorrow Night)
-  colors:
-    primary:
-      background: '#282828'
-    foreground: '#ebdbb2'
+# Colors 
+colors:
+  primary:
+    background: '#1a1a1a'  # New background color
+    foreground: '#ffffff'  # New foreground color
   normal:
-    black: '#282828'
-    red: '#cc241d'
-    green: '#98971a'
-    yellow: '#d79921'
-    blue: '#458588'
-    magenta: '#b16286'
-    cyan: '#689d6a'
-    white: '#a89984'
+    black: '#1a1a1a'
+    red: '#f44336'        # Red color
+    green: '#4caf50'      # Green color
+    yellow: '#ffeb3b'     # Yellow color
+    blue: '#2196f3'       # Blue color
+    magenta: '#e91e63'    # Magenta color
+    cyan: '#00bcd4'       # Cyan color
+    white: '#e0e0e0'      # Light gray color
   bright:
-    black: '#928374'
-    red: '#9d0006'
-    green: '#79740e'
-    yellow: '#b57614'
-    blue: '#076678'
-    magenta: '#8f3f71'
-    cyan: '#427b58'
-    white: '#3c3836'
+    black: '#616161'
+    red: '#ef5350'
+    green: '#81c744'
+    yellow: '#fff176'
+    blue: '#64b5f6'
+    magenta: '#ff80ab'
+    cyan: '#4dd0e1'
+    white: '#bdbdbd'
 
-  cursor:
-    # Cursor style
-    style:
-      # Cursor shape
-      #
-      # Values for `shape`:
-      #   - ▇ Block
-      #   - _ Underline
-      # -| Beam
-      shape: Beam
 
-      # Cursor blinking state
-      #
-      # Values for `blinking`:
-      #   - Never: Prevent the cursor from ever blinking
-      #   - Off: Disable blinking by default
-      #   - On: Enable blinking by default
-      #   - Always: Force the cursor to always blink
-    blinking: Off
+cursor:
+  style:
+    shape: Beam
 
-  # Vi mode cursor style
-  #
-  # If the vi mode cursor style is `None` or not specified, it will fall back to
-  # the style of the active value of the normal cursor.
-  #
-  # See `cursor.style` for available options.
-  #vi_mode_style: None
-
-  # Cursor blinking interval in milliseconds.
-  #blink_interval: 750
-
-  # Time after which cursor stops blinking, in seconds.
-  #
-  # Specifying '0' will disable timeout for blinking.
-  #blink_timeout: 5
-
-  # If this is `true`, the cursor will be rendered as a hollow box when the
-  # window is not focused.
-  #unfocused_hollow: true
-
-  # Thickness of the cursor relative to the cell width as floating point number
-  # from `0.0` to `1.0`.
-  #thickness: 0.15
-
-# Live config reload (changes require restart)
 #live_config_reload: true
 
 # Shell

@@ -8,19 +8,18 @@
 #   ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚══════╝    ╚═╝ ╚═════╝      |
 #									       |
 #===============================================================================
+
 gaps inner 8
 gaps outer 5
 
 set $mod Mod1
 #font pango:JetBrains Mono 0.1px
 default_border pixel 2
-for_window [class="firefox"] border pixel 2
+#for_window [class="firefox"] border pixel 2
 #disable focus on mouse hover 
 focus_follows_mouse no
-
 #flameshot 
 bindsym $mod+PrtSc exec flameshot full
-
 #volume control
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -70,7 +69,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
