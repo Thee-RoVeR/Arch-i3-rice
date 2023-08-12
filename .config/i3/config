@@ -32,7 +32,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -132,12 +132,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        status_command i3status
-	font pango:JetBrains Mono 8
-}
-
-
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #4a4a49 #4a4a49 #4a4a49 #4a4a49   #4a4a49
@@ -147,7 +141,7 @@ client.unfocused        #333333 #222222 #222222 #292d2e   #222222
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 75
 exec_always feh --bg-fill ~/.config/i3/walls/wall2.jpg
 exec_always --no-startup-id picom
-
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id dex --autostart --environment i3
