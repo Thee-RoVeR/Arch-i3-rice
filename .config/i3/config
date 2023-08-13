@@ -20,6 +20,7 @@ default_border pixel 2
 focus_follows_mouse no
 #flameshot 
 bindsym $mod+PrtSc exec flameshot full
+
 #volume control
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -138,10 +139,11 @@ client.focused          #4a4a49 #4a4a49 #4a4a49 #4a4a49   #4a4a49
 client.unfocused        #333333 #222222 #222222 #292d2e   #222222
 
 #IMP exec's
-exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --rate 75
+exec --no-startup-id xset s off
+exec_always --no-startup-id xrandr -output HDMI-0 --mode 1920x1080 --rate 75
 exec_always feh --bg-fill ~/.config/i3/walls/wall2.jpg
 exec_always --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id nm-applet
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id dex --autostart --environment i3
