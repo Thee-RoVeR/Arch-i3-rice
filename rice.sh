@@ -10,11 +10,6 @@ printf "\n Setting-up Lightdm hang tight \n"
 
 printf "\n Lightdm setup complete"
 printf "\n----------------------------------------------"
-printf "\n Cloning repositary" 
-
-cd ~
-git clone https://github.com/Thee-RoVeR/Arch-i3-rice
-printf "\n----------------------------------------------"
 printf "setting up i3wm rice, hang om a sec ^,,^ "
 
 ./scripts/i3wmconfig.sh
