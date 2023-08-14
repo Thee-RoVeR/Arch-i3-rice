@@ -15,10 +15,11 @@ gaps outer 5
 set $mod Mod1
 #font pango:JetBrains Mono 0.1px
 default_border pixel 2
-#for_window [class="firefox"] border pixel 2
+
 #disable focus on mouse hover 
 focus_follows_mouse no
-#flameshot 
+
+#flameshot (install flameshot first to use this)
 bindsym $mod+PrtSc exec flameshot full
 
 #volume control
@@ -39,7 +40,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec dmenu_run -b -nb "#000000" -nf "#EBDBB2" -sb "#F0C674" -fn "JetBrains Mono:bold:pixelsize=15"
 
 # change focus
 bindsym $mod+j focus left
@@ -120,10 +121,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        bindsym k resize shrink width 10 px or 10 ppt
+        bindsym j resize shrink width 10 px or 10 ppt
         bindsym h resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym j resize grow width 10 px or 10 ppt
+        bindsym k resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -135,7 +136,7 @@ bindsym $mod+r mode "resize"
 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4a4a49 #4a4a49 #4a4a49 #4a4a49   #4a4a49
+client.focused          #9e7b37 #9e7b37 #9e7b37 #9e7b37  #9e7b37
 client.unfocused        #333333 #222222 #222222 #292d2e   #222222
 
 #IMP exec's
