@@ -15,6 +15,14 @@ printf "\nsetting up i3wm rice, hang om a sec ^,,^ \n"
 ./scripts/i3wmconfig.sh
 printf "\n i3WM Ricing is done \n"
 
+./scripts/bash.sh
+
 sudo systemctl enable lightdm
 
-echo "DO sudo reboot"
+for (( i = 10; i >= 1; i-- )); do
+    echo "Rebooting in $i sec"
+    sleep 1
+done
+
+sudo reboot
+
