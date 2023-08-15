@@ -11,7 +11,12 @@ Welcome to my custom ricing project for Arch + i3WM !
 - Included dotfiles for various applications like alacritty , neovim.
 
 ## Screenshots
-**🚨 will be uploaded**
+![2023-08-15_22-02](https://github.com/Thee-RoVeR/Arch-i3-rice/assets/100470110/86c606d3-49c7-4803-ae01-b1dba1f8afd2)
+
+![2023-08-15_18-06](https://github.com/Thee-RoVeR/Arch-i3-rice/assets/100470110/a918316d-31ff-4795-b4b5-9a5e29714973)
+
+![2023-08-15_22-09](https://github.com/Thee-RoVeR/Arch-i3-rice/assets/100470110/6ab5d973-62d2-4013-9ca9-25c397b959fa)
+
 ## Installation
 **🚨 will be uploaded**
 ## Progress
