@@ -1,4 +1,4 @@
-# Arch Linux i3WM Ricing | 🍚🥢
+# Arch Linux i3WM Ricing | 🍚
 
 Welcome to my custom ricing project for Arch + i3WM !
 **** 
