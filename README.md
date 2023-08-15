@@ -2,10 +2,6 @@
 
 Welcome to my custom ricing project for Arch + i3WM !
 **** 
-## Features
-- Customized i3wm configuration for a personalized workflow.
-- Optimized keybindings and shortcuts for seamless navigation.
-- Included dotfiles for required applications
 
 ## Screenshots 📸
 
