@@ -20,7 +20,7 @@ default_border pixel 2
 focus_follows_mouse no
 
 #flameshot (install flameshot first to use this)
-bindsym $mod+PrtSc exec flameshot full
+bindsym $mod+F10 exec --no-startup-id flameshot full -p /home/rover/Downloads/Images/
 
 #volume control
 set $refresh_i3status killall -SIGUSR1 i3status
