@@ -23,4 +23,6 @@ if [[ -r /usr/share/bash-completion/bash_completion ]]; then
 fi
 
 #custom alias 
-alias v='nvim'
+alias 'v'="nvim"
+alias 'ls'="ls -al"
+alias 'ls'="lsd"
