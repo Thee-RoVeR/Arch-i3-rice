@@ -5,8 +5,8 @@ vim.keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-Up>", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-Down>", "<C-d>zz")
+vim.keymap.set("n", "<C-Up>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/rover_nvim/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
