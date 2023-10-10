@@ -17,12 +17,18 @@ case ${TERM} in
     PROMPT_COMMAND+=('printf "\033_%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"')
     ;;
 esac
-
-if [[ -r /usr/share/bash-completion/bash_completion ]]; then
-  . /usr/share/bash-completion/bash_completion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
 fi
 
-#custom alias 
-alias 'v'="nvim"
-alias 'ls'="ls -al"
-alias 'ls'="lsd"
+source /usr/share/bash-completion/completions/paru.bash
+
+#custom alias
+alias "ls"="lsd -al"
+alias ".."="cd .."
+alias "v"="nvim"
+alias "wifi-off"="sudo nmcli networking off"
+alias "wifi-on"="sudo nmcli networking on"
+alias "htop"="bashtop"
